@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Skills-HTML-CSS</title>
+        <link href="styles.css" rel="stylesheet">
+    </head>
+    <body>
+    	<div class="container">
+	        <h1>We want you!</h1>
+	        <p class="instructions">Are you passionate about making organic, locally-grown produce accessible to people who have an aversion to grocery stores? We want you on our team. Just fill out three easy questions, and we'll get back to you right away.</p>
+	        <form action="/application" method="POST">
+		        <label>First name: <input type="text" name="firstname" size="20"></label><br>
+		        <label>Last name: <input type="text" name="lastname" id="lastname" size="19"></label><br>
+		        <label>Desired salary: <input type="number" name="salary"></label><br>
+		        Desired position:<br>
+		        &nbsp; &nbsp; &nbsp; <label><input type="radio" name="position" value="SWE"> Software Engineer</label><br>
+		        &nbsp; &nbsp; &nbsp; <label><input type="radio" name="position" value="QAE"> QA Engineer</label><br>
+		        &nbsp; &nbsp; &nbsp; <label><input type="radio" name="position" value="PM"> Product Manager</label><br>
+		        <input type="submit" id="submit">
+		    </form>
+		</div>
+    </body>
+</html>

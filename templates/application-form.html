@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Submit your application{% endblock %}
+
+{% block content %}
+    <h1>We want you!</h1>
+    <p class="instructions">Are you passionate about making organic, locally-grown produce accessible to people who have an aversion to grocery stores and farmers markets? <br>We want you on our team. Just fill out three easy questions, and we'll get back to you right away.</p>
+    <form action="/application" method="POST">
+        <label>First name: <input type="text" name="firstname" size="20"></label><br>
+        <label>Last name: <input type="text" name="lastname" id="lastname" size="19"></label><br>
+        <label>Desired salary: <input type="number" name="salary"></label><br>
+
+        <div style="font-size: .5em; color: red; line-height: .5em; padding-left: 5px;">
+        	{% for message in get_flashed_messages() %}
+            	{{ message }}
+          	{% endfor %}
+        </div>
+
+        Desired position:<br>
+        &nbsp; &nbsp; &nbsp; <label><input type="radio" name="position" value="Software Engineer"> Software Engineer</label><br>
+        &nbsp; &nbsp; &nbsp; <label><input type="radio" name="position" value="QA Engineer"> QA Engineer</label><br>
+        &nbsp; &nbsp; &nbsp; <label><input type="radio" name="position" value="Product Manager"> Product Manager</label><br>
+        <input type="submit" id="submit">
+    </form>
+
+
+{% endblock %}
